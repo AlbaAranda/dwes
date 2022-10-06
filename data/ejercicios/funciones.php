@@ -12,7 +12,7 @@ function suma($a, $b){
     echo "<br>La variable dentro de la funcion var1  y var2 son: " . $var1 . " y " . $var2;
 
     //definicion variables estatica:
-        //variable estatica se guarda el valro
+        //variable estatica se guarda el valor aunque acabe la funcion
     static $varestatica = 0;
     echo "<br> El valor de la var estatica s: " . $varestatica;
     $varestatica++;

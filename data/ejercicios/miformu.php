@@ -55,6 +55,9 @@
                 <option value="brocoli">Brocoli</option>
             </select>
         </p>
+
+
+        <input type="hidden" name="ip" value="<?= $_SERVER['SERVER_ADDR']?>">
         <input type="submit" name="envio" id="envio" value="Enviar Datos">
     </form>
 </body>

@@ -1,5 +1,19 @@
 <?php
 
+    /*
+        - Interfaces, clases  abstract
+        - objetos
+        - polimorfismo: sobreescritura de metodos
+        - sobrecargar metodos:-> NO
+        - sobrecargar constructores: --> NO
+        - Herencia unica -> extends
+        - Invocar "algo" del padre: parent::
+        -$this -> metodo
+        -$this-> atributo
+        -static contador:
+            -> acceso a elemento estatico dentro de la clase: self::
+            ->Pertenece a la clase, no al objeto
+    */
     class Modulo extends Asignatura{
         private $codigo = null;
 

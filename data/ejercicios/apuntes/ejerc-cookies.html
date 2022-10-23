@@ -1,0 +1,47 @@
+
+<!-- Crear web en la que selecciones entre 3 idiomas: español, ingles y aleman
+y selecciones una marca de cohce preferida de entre varias y muestre el siguiente mensaje:
+
+    Bienvenido querido usuario.
+    Welcome dear user.
+    Willkommen sehr geehrter Nutzer
+
+    y la marca de coche seleccionada
+    
+    
+    Esta info debe ser guardada en cookie
+    Si no se selecciona idioma, el idioma por defecto es español
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="valida_ejerc-cookies.php" method="post">
+    <p>
+        <p>- Selecciona un idioma: </p>
+        <label for="espagnol">Español</label>
+        <input type="radio" name="idiomas" id="espagnol" value="Espagnol" checked>
+        <label for="ingles">Ingles</label>
+        <input type="radio" name="idiomas" id="ingles" value="Ingles">
+        <label for="aleman">Aleman</label>
+        <input type="radio" name="idiomas" id="aleman" value="Aleman">
+        <br><br>
+    </p>
+    <p>
+        <p>- Selecciona la marca de coche preferida: </p>
+        <label for="ford">Ford</label>
+        <input type="radio" name="coches" id="ford" value="Ford">
+        <label for="renault">Renault</label>
+        <input type="radio" name="coches" id="renault" value="Renault">
+        <label for="mercedes">Mercedes</label>
+        <input type="radio" name="coches" id="mercedes" value="Mercedes">
+    </p>
+    <input type="submit" name="envio" id="envio" value="Enviar Datos">
+    </form>
+</body>
+</html>

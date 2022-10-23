@@ -4,13 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio1</title>
-
-    <style>
-        table,tr,td{
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-    </style>
 </head>
 <body>
     <?php
@@ -21,7 +14,7 @@
         $email= "alumno@gmail.com";
 
     ?>
-    <table style="border: 1px solid black;">
+    <table border="2">
         <tr>
            <td>Nombre</td>
            <td><?php echo $nombre?></td>
@@ -50,26 +43,26 @@
 <?php
 //Solución del punto 2 del ejercicio
 
-echo "<table>";
+echo "<table border=2>";
 echo "<tr>";
 echo "<td>Nombre</td>";
 echo "<td>" . $nombre . "</td>";
 echo "</tr>";
 
-echo "<tr>";
-echo "<td>Apellidos</td>";
-echo "<td> $apellidos  </td>";
-echo "</tr>";
+print "<tr>";
+print "<td>Apellidos</td>";
+print "<td>" . $apellidos . "</td>";
+print "</tr>";
 
 echo "<tr>";
-echo "<td>Edad</td>";
+print "<td>Edad</td>";
 echo '<td>' . $edad . '</td>';
-echo "</tr>";
+print "</tr>";
 
-echo "<tr>";
-echo "<td>Teléfono</td>";
-echo '<td>' . $telefono . '</td>';
-echo "</tr>";
+echo '<tr>';
+print '<td>Teléfono</td>';
+print '<td>' . $telefono . '</td>';
+echo '</tr>';
 
 echo "<tr>";
 echo "<td>Email</td>";
@@ -78,4 +71,4 @@ echo "</tr>";
 
 echo "</table>";
 
-
+?>

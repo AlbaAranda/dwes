@@ -11,6 +11,8 @@
 
         if (isset($_POST['envio'])) {
             $nombre = $_POST['nombre'];
+            
+            //strlen para comprobar que en nombre se ha introducido una cadena mayor o igual a 3 caracteres
             if (!empty($nombre) && strlen($nombre) >= 3) {
                 
                 echo "<br>Bienvenido " . $nombre;

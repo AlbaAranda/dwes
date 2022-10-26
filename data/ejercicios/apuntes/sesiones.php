@@ -23,5 +23,6 @@ else{
 //esta sesion caduca al cerrrar el navegador
 echo "He visitado la pagina " . $_SESSION["contador"] . " veces.";
 
+echo "<br>Producto: " . $_SESSION["producto"];
 
 echo "<a href=\"sesion2.php\">Siguiente pagina</a>";

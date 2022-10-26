@@ -3,6 +3,7 @@
 
     //se destruye la info de la session pero la cookie permanece (tampoco destruye las variables globales)
     $_SESSION = array();
+    //esto es como el unset($_SESSION)
     session_destroy();
     //con esto se borraria la cookie
     setcookie(session_name(),'',time()-7200,'/'); // el ultimo valor es para que funcione en el navegador chrome

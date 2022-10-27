@@ -5,13 +5,13 @@
   function comprobarcrendenciales($nombreusu, $clave){
     if($nombreusu === "usuario" && $clave === "1234"){
       $credenciales["nombreusu"] = "usuario";
-      $crendenciales["rol"] = 0;
+      $credenciales["rol"] = 0;
       return $credenciales;
     }
 
-    if($nombreusu === "admin" && $clave == "4567"){
-      $credenciales["nombreusu"] = "usuario";
-      $crendenciales["rol" ]= 1;
+    if($nombreusu === "admin" && $clave === "4567"){
+      $credenciales["nombreusu"] = "admin";
+      $credenciales["rol"] = 1;
       return $credenciales;
     }
     return false;
@@ -19,13 +19,14 @@
 
   if($_SERVER["REQUEST_METHOD"] === "POST"){
     if(isset($_POST["envio"])){
-      $credentials = comprobarcrendenciales($_POST["nombre"], $_POST["passwd"]); // en la variable guardas el array que devuelve la funcion si funciona bien , o falso
+      $credentials = comprobarcrendenciales($_POST["usuario"], $_POST["password"]); // en la variable guardas el array que devuelve la funcion si funciona bien , o falso
       if($credentials === false){
         $error = 1;
       }
       else{
         session_start();
         $_SESSION["loginok"] = $credentials;
+        //no hay qe dejar espacios entre location y los : porque sino no funciona
         header("Location: principal.php");
       }
     }
@@ -64,11 +65,11 @@
   ?>
    <!-- Con lo puesto en el action evitas la inyeccion de xml -->
   <form name="formulario" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <label for="nombre">Introduce Usuario: </label>
-        <input type="text" name="nombre" id="nombre">
+        <label for="usuario">Introduce Usuario: </label>
+        <input type="text" name="usuario" id="usuario">
         <br><br>
         <label for="password">Introduce la contraseña: </label>
-        <input type="password" name="passwd" id="passwd">
+        <input type="password" name="password" id="password">
         <br><br>
         <input type="submit" name="envio" id="envio" value="Enviar Datos">
   </form>

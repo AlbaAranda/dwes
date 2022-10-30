@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form name="miformu" action="/autoriza.php" method="get">
+    <form name="miformu" action="autoriza.php" method="get">
         <p>
             <label for="nombre">Introduce Nombre: </label>
             <input type="text" name="nombreusu" id="nombreusu">

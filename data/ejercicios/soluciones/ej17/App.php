@@ -25,7 +25,7 @@ class App {
         try {
             $this->$method();      
         } 
-        //por el catch entran todos los error 
+        //por el catch entran todos los errores
         catch (\Throwable $th) {
             if (method_exists($this, $method)) {
 
@@ -48,12 +48,12 @@ class App {
         }
     }
 
-    public function index()
-    {
+    public function index() {
         // echo "Estamos en el index<br>";
         include('vista/index.php');
     }
     
+    //Método para calcular la serie de Fibonacci
     public function fibonacci(){
         $num1 = 0;
         $num2 = 1;
@@ -88,12 +88,101 @@ class App {
     
     }
 
-    //método encargado de mostrar la serie 
+    //Método para calcular las potencias de 2
+    public function potencias2(){
+
+        $base = 2;
+        $resultadoPotencias = [];
+
+        //Si el array está ya lleno, se inicia vacio para guardar el resultado de la función requerida
+        $this->resultadoSerie = [];
+
+        //para buscar las pontencias de 2 ($base), desde 2 elevado a 1 hasta 2 elevado a 24
+        for($exponente= 1; $exponente<=24; $exponente++){
+            //resultado[$exponente-1] para tener claro que se va a comenzar a introducir valores desde posición 0 del array.  pow es la funcion para realizar potencias
+            $resultadoPotencias[$exponente-1] = pow($base,$exponente);
+        }
+
+        //se guarda el resultado de potencias de 2 en el array reseteado a vacio anteriormente
+        $this->resultadoSerie = $resultadoPotencias;
+
+        //incluye la vista donde se muestra el resultado del método
+        include('vista/mostrarSerie.php');
+    }
+
+    //Método para calcular factoriales
+    public function factoriales(){
+
+        $factorial = 1;
+        $resultado = 1;
+        $resultadosFactoriales = [];
+
+        //Si el array está ya lleno, se inicia vacio para guardar el resultado de la función requerida
+        $this->resultadoSerie = [];
+
+        //Buscar los factoriales desde 1 hasta el más cercano al millón
+        while($resultado <= 1000000){
+            //resultadosFactoriales[$factorial-1] para tener claro que se va a comenzar a introducir valores desde comenzar a introducir valores desdela posición 0 del array
+            $resultadosFactoriales[$factorial -1] = $resultado;
+            $factorial++;
+            $resultado = $resultado * $factorial;
+        }
+
+        //se guarda el resultado de factoriales en el array reseteado a vacio anteriormente
+        $this->resultadoSerie = $resultadosFactoriales;
+
+        //incluye la vista donde se muestra el resultado del método
+        include('vista/mostrarSerie.php');
+    }
+
+    //Método para buscar números primos
+    public function primos(){
+
+        $cantidadDiv = 0;
+        $resultadoPrimos = [];
+
+        //Si el array está ya lleno, se inicia vacio para guardar el resultado de la función requerida
+        $this->resultadoSerie = [];
+
+        //buscar números entre 1 y 10000 que sean números primos
+        for($numero = 1; $numero<= 10000; $numero++){
+
+            /*cada vez que $numero aumenta en 1 $cantidadDiv se resetea a 0, para buscar en el bucle anidado la cantidad de divisores sólo de ese número 
+            ( y que no se acumulen la cantidad de divisore del número anterior)*/
+            $cantidadDiv = 0;
+
+            //este bucle anidado para buscar los divisores del números
+            for($divisor = 1; $divisor<= $numero; $divisor++){
+                if($numero%$divisor == 0){
+
+                    //cada vez que se encuentra un divisor de un número, aumenta en en 1 la cantidad de divisores
+                    $cantidadDiv++;
+                }
+            }
+
+            //si un número solo tiene como cantidad de divisores 2  (es decir, el 1 y el propio número), es que es un número primo y se guarda en el array de los número primos
+            if($cantidadDiv == 2){
+                $resultadoPrimos[] = $numero;
+            }
+        }
+
+        //se guarda el resultado de factoriales en el array reseteado a vacio anteriormente
+        $this->resultadoSerie = $resultadoPrimos;
+
+        //incluye la vista donde se muestra el resultado del método
+        include('vista/mostrarSerie.php');
+    }
+
+
+    //método encargado de mostrar la serie numérica de cada método
     public function mostrarSerie(){
+        //recorremos el array en el que se han guardado los resultados con un bucle foreach
         foreach($this->resultadoSerie as $clave=>$numero){
+            //si es la primera posición (la 0) del array se imprime solo el número
             if($clave==0){
                 echo $numero;
             }
+            //si son otras posiciciones distintas a las primeras antes del número se imprimirá una coma con un espacio
             else{
                 echo ",&nbsp" . $numero;
             }

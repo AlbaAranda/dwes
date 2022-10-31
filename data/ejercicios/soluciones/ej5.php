@@ -12,7 +12,7 @@ echo "<br>Divisores de " . NUMERO . ": ";
 //Para dividir un número desde 1 hasta sí mismo (número a número) se crea un bucle for que comience en 1 e itere hasta llegar al número indicado por constante
 for($divisor=1; $divisor<= NUMERO; $divisor++){
 
-    //Si el resto del número entre el divisor es 0, entonces el divisor es un número divisible del número establecido por constante y se imprime.
+    //Si el resto del número entre el divisor es 0, entonces el divisor es un número divisible del número establecido por constante y se imprime en un echo con un espacio
     //Si lo anterior ocurre la variable $cantidadDiv se incrementa en uno, para llevar el recuento de la cantidad de divisores del número indicado
     if(NUMERO%$divisor == 0){
         echo $divisor . "&nbsp";

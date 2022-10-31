@@ -11,9 +11,5 @@
   <?php
   require('vista/header.php');
   ?>
-  <div>
-  Estamos en el index
-  </div>
-  <br>
 </body>
 </html>

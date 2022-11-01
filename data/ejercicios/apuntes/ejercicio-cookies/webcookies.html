@@ -21,25 +21,25 @@ y selecciones una marca de cohce preferida de entre varias y muestre el siguient
     <title>Document</title>
 </head>
 <body>
-    <form action="valida_ejerc-cookies.php" method="post">
+    <form action="autoriza_cookies.php" method="post">
     <p>
         <p>- Selecciona un idioma: </p>
         <label for="espagnol">Español</label>
-        <input type="radio" name="idiomas" id="espagnol" value="Espagnol" checked>
+        <input type="radio" name="idiomas" id="espagnol" value="es" checked>
         <label for="ingles">Ingles</label>
-        <input type="radio" name="idiomas" id="ingles" value="Ingles">
+        <input type="radio" name="idiomas" id="ingles" value="en">
         <label for="aleman">Aleman</label>
-        <input type="radio" name="idiomas" id="aleman" value="Aleman">
+        <input type="radio" name="idiomas" id="aleman" value="de">
         <br><br>
     </p>
     <p>
         <p>- Selecciona la marca de coche preferida: </p>
         <label for="ford">Ford</label>
-        <input type="radio" name="coches" id="ford" value="Ford">
+        <input type="radio" name="marca" id="ford" value="Ford">
         <label for="renault">Renault</label>
-        <input type="radio" name="coches" id="renault" value="Renault">
+        <input type="radio" name="marca" id="renault" value="Renault">
         <label for="mercedes">Mercedes</label>
-        <input type="radio" name="coches" id="mercedes" value="Mercedes">
+        <input type="radio" name="marca" id="mercedes" value="Mercedes">
     </p>
     <input type="submit" name="envio" id="envio" value="Enviar Datos">
     </form>

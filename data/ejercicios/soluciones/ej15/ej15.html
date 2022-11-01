@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    <h3>Ejercicio 15</h3>
+    <form name="formulario15" action="validar_ej15.php" method="post">
+        <p>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="datospersonales[]" id="nombre">
+        </p>
+        <p>
+            <label for="apellido1">Primer apellido: </label>
+            <input type="text" name="datospersonales[]" id="apellido1">
+        </p>
+        <p>
+            <label for="apellido2">Segundo apellido: </label>
+            <input type="text" name="datospersonales[]" id="apellido2">
+        </p>
+        <input type="submit" name="envio" id="envio" value="Enviar Datos">
+</body>
+</html>

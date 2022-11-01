@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form name="formulario" action="" method="post">
+    <form name="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         <p>
             <label for="operando1">Operando 1: </label>
             <input type="text" name="operando1" id="operando1">

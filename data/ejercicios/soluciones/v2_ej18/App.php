@@ -14,6 +14,7 @@
         } else {
           $method = 'index';
         } 
+
         $this->$method();    
       }
 

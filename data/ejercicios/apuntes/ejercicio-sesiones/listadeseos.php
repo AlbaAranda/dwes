@@ -11,16 +11,34 @@
             $sesioncodif = json_encode($_SESSION);
 
             //OPCION 1: decodificarlo como un array 
+            //devuelve un array asociativo, esta es la mejor opcion y la mas simple
             $sesiondecodif = json_decode($sesioncodif,true);
     
             //var_dump($sesiondecodif);
 
             echo "<br><br>";
+
+            //$_SESSION["listadeseo"][4]= "Porsche";
+
             // decodificarlos como un objeto
             var_dump($sesiondecodif);
 
-            //decodificar
+            //OPCION 2: decodificar como un objeto 
             $sesiondecodif = json_decode($sesioncodif);
+            //cambiar el elemento 2 a pizarra $sesiond;ecodif
+            //var_dump($sesiondecodif)
+            
+            //ACCEDER A UN ELEMENTO DEL ARRAY 
+            $sesiondecodif->{'listadeseo'}[1]= "lampara";
+            //echo "<br>EL elemento es " . $sesiondecodif->{'listadeseo'}[6];
+            //$this->metodo
+            var_dump($sesiondecodif);
+
+            $miarray = get_object_vars($sesiondecodif);
+            print_r($miarray);
+            for($i=0; $i<count($miarray,COUNT_RECURSIVE)-1; $i++){
+                echo "<br>Elemento $i es :" . $miarray["listadeseo"][$i];
+            }
 
         }
     }

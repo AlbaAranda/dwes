@@ -8,7 +8,7 @@
 <body>
     <h3>Eercicio 18</h3>
     <h3>Formulario de login</h3>
-    <form name="formulario" action="auth.php" method="post">
+    <form name="formulario18" method="post">
         <p>
             <label for="usuario">Introduce usuario: </label>
             <input type="text" name="usuario" id="usuario">
@@ -22,9 +22,8 @@
 </body>
 </html>
 
-<!--<?php
+<?php
     if(isset($_COOKIE["usuario"])){
-        header("Location: home.php");
+        header("Location: ?method=home");
     }
-    action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
-?> -->
+?>

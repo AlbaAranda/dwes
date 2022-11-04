@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <ul>
+        <pre>
+    <?php 
+    //mostrar lista deseos
+    $listadeseos = json_decode($_COOKIE["listadeseos"]);
+    //si lista deseo no es nula la lista que la muestsre y que cuente los elementos
+    if (!is_null($listadeseos) && count($listadeseos)) {
+        foreach ($listadeseos as $posicion => $deseo) {
+        echo "<li> Deseo nº $posicion: " . $deseo . '</li>';
+        }
+    } else {
+        echo "No hay deseos todavía";
+    }
+    ?>
+    </ul>
     <form name="formulariodeseos" action="?method=new" method="post">
     <h1>Lista de Deseos: </h1>
         <p>
-            <select name="lista" id="lista" required>
-                <option value="movil">Movil</option>
-                <option value="tv">Tv</option>
-                <option value="coche">Coche</option>
-                <option value="ordenador">Portatil</option>
-                <option value="auriculares">Auriculares</option>
-                <option value="videoconsola">Videoconsola</option>
-            </select>
+        <label for="new">Nuevo deseo</label>
+        <input type="text" name="deseo">
         </p>
         <input type="submit" name="envio" id="envio" value="Agregar Deseo">
         <br><br>

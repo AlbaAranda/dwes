@@ -18,10 +18,11 @@
             $this->$method();      
         }
         
-        public function login()
-        {
-            if (isset($_COOKIE)) {
-                
+        public function login(){
+            //si esta definida la cookie de usuario que redireccione al metodo home
+            if (isset($_COOKIE['usuario'])) {
+                header('Location: ?method=home');
+            return;
             }
 
             include('vista/login.php');    
@@ -31,6 +32,7 @@
             if (isset($_POST['envio'])) {
                 if (!empty($_POST['usuario'])) { 
                      setcookie("usuario",$_POST["usuario"],time()+3600);
+                     //no se crea la cookie de password por seguridad
                 }
         
                 if(!empty($_POST["usuario"]) && !empty($_POST["password"])){
@@ -55,7 +57,7 @@
                 $listadeseos = json_decode($_COOKIE["listadeseos"]);
             }
             //añadir el nuevo deseo al array 
-            $listadeseos[]= $_POST["lista"];
+            $listadeseos[]= $_POST["deseo"];
             setcookie("listadeseos",json_encode($listadeseos), time()+3600);
             //llamar al metodo para que redireccione
             header("Location: ?method=home");

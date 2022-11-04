@@ -6,7 +6,7 @@
 </head>
 <body>
     <form name="formulariodeseos" action="?method=new" method="post">
-    <h2>Lista de Deseos: </h2>
+    <h1>Lista de Deseos: </h1>
         <p>
             <select name="lista" id="lista" required>
                 <option value="movil">Movil</option>

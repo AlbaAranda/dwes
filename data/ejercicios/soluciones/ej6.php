@@ -11,8 +11,11 @@ $jugadoresBasket[] = "Ricky Rubio";
 //Se añade el quinto y ultimo jugador
 $jugadoresBasket[] = "Sergio Llull";
 
-echo "a) Impresión del array indicando sólo los nombres:";
-echo "<br>Jugadores del equipo de basket: ";
+echo "<strong>a) Impresión del array indicando sólo los nombres</strong>";
+echo "<br><br>Jugadores del equipo de basket: ";
+
+//bucle foreach para recorrer el array de $jugadoresBasket e ir guardando en cada vuelta el valor en la variable $jugador
+//cada valor del array se imprime en formato de lista desordenada
 foreach ($jugadoresBasket as $jugador){
     echo "<ul>";
     echo "<li>". $jugador . "</li>";
@@ -20,8 +23,11 @@ foreach ($jugadoresBasket as $jugador){
 }
 
 
-echo "<hr> b) Impresión del array indicando posicion y el nombre del elemento en el array";
-echo "<br>Jugadores del equipo de basket: ";
+echo "<hr><strong>b) Impresión del array indicando posicion y el nombre del elemento en el array </strong>";
+echo "<br><br>Jugadores del equipo de basket: ";
+
+//bucle foreach para recorrer el array e ir guardando en cada iteración tanto la posición como el valor en la variable $posicion y $nombre respectivamente
+//como en la opción anterior se imprime en formato de lista desordenada
 foreach ($jugadoresBasket as $posicion=>$nombre){
     echo "<ul>";
     echo "<li>" . $posicion . ": " . $nombre . "</li>";

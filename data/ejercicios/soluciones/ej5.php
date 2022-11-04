@@ -2,9 +2,9 @@
 
 
 echo "<h3>Ejercicio 5</h3>";
-
+//constante declarada con uno de los valores indicados en el ejercicio
 const NUMERO = 169;
-
+//contador que almacena la cantidad de divisores encontrados
 $cantidadDiv = 0;
 
 echo "<br>Divisores de " . NUMERO . ": ";

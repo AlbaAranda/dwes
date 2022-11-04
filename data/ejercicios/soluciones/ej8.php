@@ -18,7 +18,7 @@
 
     /*Al igual que en la segunda parte del ejercicio 6, en este ejercicio se comprueba también en formato lista desordenada que se imprimen los
     valores del array recorriéndolo con un bucle foreach simple primero y después con un bucle foreach clave=>valor*/
-    echo "<br>a) Impresión del array indicando sólo los nombres:";
+    echo "<br><strong>a) Impresión del array indicando sólo los nombres</strong>";
     echo "<br>Jugadores del equipo de basket: ";
 
     foreach ($jugadoresBasket as $jugador){
@@ -27,7 +27,7 @@
         echo "</ul>";
     }
 
-    echo "<hr> b) Impresión del array indicando posicion y el nombre del elemento en el array";
+    echo "<hr><strong> b) Impresión del array indicando posicion y el nombre del elemento en el array</strong>";
     echo "<br>Jugadores del equipo de basket: ";
 
     foreach ($jugadoresBasket as $posicion=>$nombre){

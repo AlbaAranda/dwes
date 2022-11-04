@@ -10,7 +10,7 @@
         'pivot' => 'Sergio Llull'
     );
 
-    //Se recorre el array con un blucle foreach  de tipo clave=>valor y se va mostrando con echo
+    //Se recorre el array con un blucle foreach  de tipo clave=>valor y se va mostrando con echo y un salto de línea
     foreach ($jugadoresBasket as $posicion=>$nombre){
         echo $posicion . ": " . $nombre . '<br>';
     }

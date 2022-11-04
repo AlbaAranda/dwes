@@ -6,14 +6,12 @@
     <title>Ejercicio 12</title>
 </head>
 <body>
-    <form name="miniformu" method="post" >
-        <h2>Formulario</h2>
+    <form name="miniformu" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" >
+        <h2>Ejercicio 12. Formulario</h2>
         <p>
             <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" id="nombre">
-            
+            <input type="text" name="nombre" id="nombre">  
         </p>
-        <p></p>
         <input type="submit" name="envio" id="envio" value="Enviar Datos">
     </form>
 </body>

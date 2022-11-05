@@ -13,7 +13,7 @@
     //si lista deseo no es nula la lista que la muestsre y que cuente los elementos
     if (!is_null($listadeseos) && count($listadeseos)) {
         foreach ($listadeseos as $posicion => $deseo) {
-        echo "<li> Deseo nº $posicion: " . $deseo . '</li>';
+        echo "<li> Deseo  $posicion: " . $deseo . '</li>';
         }
     } else {
         echo "No hay deseos todavía";

@@ -8,10 +8,11 @@
 <body>
     <ul>
         <?php
+        //se crea un array para guardar los colores posibles
         $colores = ["red","blue","yellow","green"];
         foreach($colores as $color) {
         ?>
-        <!-- mostrar en una lista todos los colores que hay en el array-->
+        <!-- mostrar en una lista todos los colores que hay en el array en forma de enlace-->
         <li><?= $color ?> <a href="?method=cambio&color=<?= $color ?>">Cambiar</a> </li>
         <?php
         }

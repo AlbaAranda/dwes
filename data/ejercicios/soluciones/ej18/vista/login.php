@@ -6,7 +6,7 @@
     <title>Ejercicio 18</title>
 </head>
 <body>
-    <h3>Eercicio 18</h3>
+    <h3>Ejercicio 18</h3>
     <h3>Login</h3>
     <!--con el action se llama al metodo auth para enviarle los datos del formulario -->
     <form name="formulario" action="?method=auth" method="post">

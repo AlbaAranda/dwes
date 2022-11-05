@@ -91,7 +91,7 @@
 
         public function empty(){
             if(isset($_COOKIE["listadeseos"])){
-                ////con json_decode guardamos el contenido de la cookie en una variable
+                //con json_decode guardamos el contenido de la cookie en una variable
                 $listadeseos = json_decode($_COOKIE["listadeseos"]);
                 //vaciar la lista de deseos
                 $listadeseos = [];
@@ -104,7 +104,7 @@
 
         public function close(){
             //borrar la cookie usuario
-            setcookie("usuario","",time()-7200, '/');
+            setcookie("usuario","", 1);
             //redirección al método login 
             header("Location: ?method=login");
         }

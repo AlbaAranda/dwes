@@ -7,8 +7,7 @@
             $this->name = $name;
         }
         
-        public function run()
-        {
+        public function run(){
             if (isset($_GET['method'])) {
             $method = $_GET['method'];
             } else {

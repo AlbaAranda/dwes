@@ -7,9 +7,13 @@
 </head>
 <body>
     <h3>Ejercicio 15</h3>
+    <!-- Con el action indicamos a donde queremos que se envíe el formulario. En este caso se envia a un archivo php para comprobar si se han introducidos datos
+    en los campos o no -->
     <form name="formulario15" action="validar_ej15.php" method="post">
         <p>
             <label for="nombre">Nombre: </label>
+            <!--en name se guardan el valor del input en formato array. Lo mismo para los siguientes inputs, que se guardan en el mismo array, ya que se usa el 
+            mismo nombre en name-->
             <input type="text" name="datospersonales[]" id="nombre">
         </p>
         <p>

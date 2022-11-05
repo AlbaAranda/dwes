@@ -11,8 +11,8 @@ class App {
     }
 
     /*con esta función se ejecuta la aplicación. Si el metodo está definido, se ejecuta dicho método
-    sino se ejecuta el método index ( que se incluye en el archivo index de la carpeta vista). La primera vez que se carga la págna 
-    entra por el else (el index) ya que el parámetro método no va en la url en la primera carga*/
+    sino se ejecuta el método index ( que se incluye en el archivo index de la carpeta vista). La primera vez que se carga la página 
+    entra por el else (el index) ya que aun no se ha seleccionado ningún método */
     public function ejecutar() {
         if (isset($_GET['method'])) {
         $method = $_GET['method'];
@@ -48,8 +48,8 @@ class App {
         }
     }
 
+    //Método para incluir el código contenido en el index de la vista
     public function index() {
-        // echo "Estamos en el index<br>";
         include('vista/index.php');
     }
     
@@ -122,7 +122,7 @@ class App {
 
         //Buscar los factoriales desde 1 hasta el más cercano al millón
         while($resultado <= 1000000){
-            //resultadosFactoriales[$factorial-1] para tener claro que se va a comenzar a introducir valores desde comenzar a introducir valores desdela posición 0 del array
+            //resultadosFactoriales[$factorial-1] para tener claro que se va a comenzar a introducir valores desde la posición 0 del array
             $resultadosFactoriales[$factorial -1] = $resultado;
             $factorial++;
             $resultado = $resultado * $factorial;

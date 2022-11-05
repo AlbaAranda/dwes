@@ -19,7 +19,6 @@
         }
 
         public function home(){
-            session_start();
             include("vista/home.php");
             $this->colores();
         }
@@ -29,10 +28,9 @@
         }
 
         public function cambio(){
-            //hay que abrir aquí también sesión porque sino no realiza el cambio
-            session_start();
             $color= $_GET['color'];
-            $_SESSION['color'] = $color;
+            //se crea la cookie de color
+            setcookie('color', $color, time()+3600);
             header('Location: ?method=home');
 
         }

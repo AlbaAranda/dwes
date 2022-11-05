@@ -6,6 +6,7 @@
     <title>Ejercicio 12</title>
 </head>
 <body>
+    <!-- Con lo escrito en el action como valor, la información del formulario se redirige a sí mismo y  se evita la inyeccion de xml -->
     <form name="miniformu" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" >
         <h2>Ejercicio 12. Formulario</h2>
         <p>
@@ -18,12 +19,17 @@
 </html>
 
 <?php
+
+    //si está definido el input envio:
     if (isset($_POST['envio'])) {
+        //en la variable $nombre se guarda el valor del input nombre
         $nombre = $_POST['nombre'];
+        //si la variable $nombre no está vacía, debajo del formulario se imprime una cadena junto con el valor de la variable $nombre
         if (!empty($nombre)) {
 
             echo "<br>Bienvenido " . $nombre;
         } 
+        // si variable $nombre está vacía se indica en el formulario se indica en el formulario que el campo nombre es obligatorio
         else {
             echo "<br>*El campo nombre es obligatorio";
         }

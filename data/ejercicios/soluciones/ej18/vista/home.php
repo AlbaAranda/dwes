@@ -8,7 +8,7 @@
     <ul>
         <pre>
     <?php 
-    //mostrar lista deseos
+    //se guarda el contenido de la cookie (la lista de deseos) e una variable
     $listadeseos = json_decode($_COOKIE["listadeseos"]);
     //si lista deseo no es nula la lista que la muestsre y que cuente los elementos
     if (!is_null($listadeseos) && count($listadeseos)) {
@@ -20,6 +20,8 @@
     }
     ?>
     </ul>
+    <!-- aquí en action se llama al método new que se encuentra en App.php para enviarle los datos del formulario. 
+    En el resto de formulario se realiza lo mismo pero con el método incado en cada caso-->
     <form name="formulariodeseos" action="?method=new" method="post">
     <h1>Lista de Deseos: </h1>
         <p>

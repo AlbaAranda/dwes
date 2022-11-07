@@ -1,6 +1,12 @@
 <?php
         require "../bbddconexion.php";
     
+        /*
+        /recuros/metodo/parametro
+        metodos->Metodos o funciones dentro del controlador
+        parametros->opcional
+        */
+        
         $sql = "select nombreusu,password from credenciales";
         $registros = $bd->query($sql);
         echo "<br>Número de registros devueltos: " . $registros->rowCount();
